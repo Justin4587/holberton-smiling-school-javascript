@@ -1,0 +1,84 @@
+
+
+:root {
+  --color-purple: #C271FF;
+}
+
+* {
+  font-family: 'Source Sans Pro';
+}
+
+
+.btn {
+  background-color: #C271FF;
+  border-color: #C271FF;
+}
+
+.btn:hover, .btn:active {
+  background-color:var(--color-purple);
+  border-color: #C271FF;
+  opacity: 0.9;
+}
+
+
+.text-purple {
+  color: #C271FF;
+}
+
+.smile {
+  width: auto;
+  height: 30px;
+}
+
+#nav-menu-btn {
+  background-color: white;
+  width: 13px;
+  height: 2px;
+  position: absolute;
+  top: 3rem;
+}
+
+#nav-menu-btn::before {
+  content:"";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  top: -0.5rem;
+}
+
+#nav-menu-btn::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  top: 0.4rem;
+}
+
+.nav-item {
+  font-size: 12px;
+}
+
+@media (max-width: 576px) {
+    .hamburger {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    #nav-toggle:checked ~ .hamburger {
+      max-height: 100vh;
+      overflow: hidden;
+    }
+}
+
+#carousel-extras {
+  background-color: #C271FF;
+}
+
+#free-bg-color {
+  background-color: #071629;
+}
