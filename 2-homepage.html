@@ -87,28 +87,10 @@
   <section class="carousel-section container-fluid text-white" id="carousel-extras">
     <div id="carouselExampleControls" class="carousel slide px-4" data-ride="carousel">
       <div class="carousel-inner justify-content-center px-2">
-        <div class="carousel-item active">
-          <div class="row flex-wrap justify-content-center align-items-center m-5 px-3">
-              <div class="d-flex flex-column col-3">
-                <img src="./images/profile_5.jpg" class="rounded-circle" width="160px" height="160px">
-              </div>              
-              <blockquote class="d-flex flex-wrap flex-column blockquote col-9">
-              <p class="mb-0">« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</p>
-              <footer class="blockquote-footer text-white">Person Name<cite class="Source Title"><br>weather presenter</cite></footer>
-            </blockquote>  
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row flex-wrap justify-content-center align-items-center m-5 px-3">
-              <div class="d-flex flex-column col-3">
-                <img src="./images/profile_5.jpg" class="rounded-circle" width="160px" height="160px">
-              </div>              
-              <blockquote class="d-flex flex-wrap flex-column blockquote col-9">
-              <p class="mb-0">« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</p>
-              <footer class="blockquote-footer text-white">Person Name<cite class="Source Title"><br>weather presenter</cite></footer>
-            </blockquote>  
-          </div>
-        </div>
+        <div class="spinner-border text-primary" id="spinner" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div id="carousel_testimonials"></div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <img src="./images/arrow_white_left.png" aria-hidden="true" width="30px" height="63px"></span>
           <span class="sr-only">Previous</span>
@@ -125,90 +107,10 @@
       <h2 class="text-center mt-4">Most <span class="text-purple font-weight-bold">popular</span> tutorials</h2>
       <div class="carousel-inner row py-2 m-0 d-flex justify-content-center align-contents-center">
         <div class="col-xs mx-5 px-5 d-flex justify-content-around align-contents-center">
-          <div class="card border-0" style="height: 335px; width: 255px">
-            <div id="video-card-image" class="d-block align-self-center justify-content-center" style="background-image: url(./images/thumbnail_1.jpg); background-size: cover; background-position: center; height: 154px; width: 255px;">
-              <img src="./images/play.png" class="mx-auto my-5 d-block card-image align-self-center" style="width: 64px; height: 64px;">
-            </div>
-            <div class="card-body" style="height: 181px">
-              <h5 class="card-title m-0 p-0">Diagonal Smile</h5>
-              <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-              <div class="d-flex justify-content-start">
-                <img src="./images/profile_1.jpg" class="rounded-circle" width="30px" height="30px">
-                <p class="text-purple">Phillip Massey</p>
-              </div>
-              <div class="d-flex justify-content-space-between">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_off.png" width="15px" height="15px">
-                <p class="text-purple">8 min</p>
-              </div>
-            </div>
+          <div class="spinner-border text-primary" id="spinner" role="status">
+            <span class="sr-only">Loading...</span>
           </div>
-          <div class="card border-0" style="height: 335px; width: 255px">
-            <div id="video-card-image" class="d-block align-self-center justify-content-center" style="background-image: url(./images/thumbnail_2.jpg); background-size: cover; background-position: center; height: 154px; width: 255px;">
-              <img src="./images/play.png" class="mx-auto my-5 d-block card-image align-self-center" style="width: 64px; height: 64px;">
-            </div>
-            <div class="card-body" style="height: 181px">
-              <h5 class="card-title m-0 p-0">Sad Smile</h5>
-              <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-              <div class="d-flex justify-content-start">
-                <img src="./images/profile_1.jpg" class="rounded-circle" width="30px" height="30px">
-                <p class="text-purple">Phillip Massey</p>
-              </div>
-              <div class="d-flex justify-content-space-between">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_off.png" width="15px" height="15px">
-                <p class="text-purple">8 min</p>
-              </div>
-            </div>
-          </div>
-          <div class="card border-0" style="height: 335px; width: 255px">
-            <div id="video-card-image" class="d-block align-self-center justify-content-center" style="background-image: url(./images/thumbnail_3.jpg); background-size: cover; background-position: center; height: 154px; width: 255px;">
-              <img src="./images/play.png" class="mx-auto my-5 d-block card-image align-self-center" style="width: 64px; height: 64px;">
-            </div>
-            <div class="card-body" style="height: 181px">
-              <h5 class="card-title m-0 p-0">Natural Smile</h5>
-              <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-              <div class="d-flex justify-content-start">
-                <img src="./images/profile_1.jpg" class="rounded-circle" width="30px" height="30px">
-                <p class="text-purple">Phillip Massey</p>
-              </div>
-              <div class="d-flex justify-content-space-between">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_off.png" width="15px" height="15px">
-                <p class="text-purple">8 min</p>
-              </div>
-            </div>
-          </div>
-          <div class="card border-0" style="height: 335px; width: 255px">
-            <div id="video-card-image" class="d-block align-self-center justify-content-center" style="background-image: url(./images/thumbnail_4.jpg); background-size: cover; background-position: center; height: 154px; width: 255px;">
-              <img src="./images/play.png" class="mx-auto my-5 d-block card-image align-self-center" style="width: 64px; height: 64px;">
-            </div>
-            <div class="card-body" style="height: 181px">
-              <h5 class="card-title m-0 p-0">Happy Smile</h5>
-              <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-              <div class="d-flex justify-content-start">
-                <img src="./images/profile_1.jpg" class="rounded-circle" width="30px" height="30px">
-                <p class="text-purple">Phillip Massey</p>
-              </div>
-              <div class="d-flex justify-content-space-between">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_on.png" width="15px" height="15px">
-                <img src="./images/star_off.png" width="15px" height="15px">
-                <p class="text-purple">8 min</p>
-              </div>
-            </div>
-          </div>
+          <div id="carousel_tutorials"></div>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
