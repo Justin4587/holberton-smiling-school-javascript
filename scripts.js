@@ -76,22 +76,22 @@ function latestBuilder(item, i) {
 </div>`)
 }
 
-function coursesBuilder(courses, i) {
+function coursesBuilder(item, i) {
   let activeStatus = "";
   if (!i) {
     activeStatus = "active";
   };
   $("#coursesResults").append(`
   <div class="card carousel-item ${activeStatus} border-0" style="height: 335px; width: 255px">
-  <div id="video-card-image" class="d-block align-self-center justify-content-center" style="background-image: url(${courses.thumb_url}); background-size: cover; background-position: center; height: 154px; width: 255px;">
+  <div id="video-card-image" class="d-block align-self-center justify-content-center" style="background-image: url(${item.thumb_url}); background-size: cover; background-position: center; height: 154px; width: 255px;">
     <img src="./images/play.png" class="mx-auto my-5 d-block card-image align-self-center" style="width: 64px; height: 64px;">
   </div>
   <div class="card-body" style="height: 181px">
-    <h5 class="card-title m-0 p-0">${courses.title}</h5>
-    <p class="card-text text-secondary">${courses['sub-title']}</p>
+    <h5 class="card-title m-0 p-0">${item.title}</h5>
+    <p class="card-text text-secondary">${item['sub-title']}</p>
     <div class="d-flex justify-content-start">
-      <img src="${courses.author_pic_url}" class="rounded-circle" width="30px" height="30px">
-      <p class="text-purple">${courses.author}</p>
+      <img src="${item.author_pic_url}" class="rounded-circle" width="30px" height="30px">
+      <p class="text-purple">${item.author}</p>
     </div>
     <div class="d-flex justify-content-space-between">
       <img src="./images/star_on.png" width="15px" height="15px">
@@ -99,7 +99,7 @@ function coursesBuilder(courses, i) {
       <img src="./images/star_on.png" width="15px" height="15px">
       <img src="./images/star_on.png" width="15px" height="15px">
       <img src="./images/star_off.png" width="15px" height="15px">
-      <p class="text-purple">${courses.duration}</p>
+      <p class="text-purple">${item.duration}</p>
     </div>
   </div>
 </div>`)
@@ -129,7 +129,6 @@ async function tutorialsData () {
       $("#carousel_tutorials").empty();
       hideSpinner();
       result.forEach((item, i) => {
-        console.log(i);
         tutorialsBuilder(item, i);
       });
     }
@@ -145,7 +144,6 @@ async function latestData () {
       $("#carousel_latest").empty();
       hideSpinner();
       result.forEach((item, i) => {
-        console.log(i);
         latestBuilder(item, i);
       });
     }
@@ -159,11 +157,10 @@ async function coursesData () {
     contentType: "application/json",
     success: function (result) {
       $("#coursesResults").empty();
-      const {courses} = result;
+      const { courses } = result;
       hideSpinner();
       courses.forEach((courses, i) => {
         console.log(courses);
-        console.log(result);
         coursesBuilder(courses, i);
       });
     }
