@@ -76,13 +76,10 @@ function latestBuilder(item, i) {
 </div>`)
 }
 
-function coursesBuilder(item, i) {
-  let activeStatus = "";
-  if (!i) {
-    activeStatus = "active";
-  };
+function coursesBuilder(item) {
+  
   $("#coursesResults").append(`
-  <div class="card carousel-item ${activeStatus} border-0" style="height: 335px; width: 255px">
+  <div class="card border-0" style="height: 335px; width: 255px">
   <div id="video-card-image" class="d-block align-self-center justify-content-center" style="background-image: url(${item.thumb_url}); background-size: cover; background-position: center; height: 154px; width: 255px;">
     <img src="./images/play.png" class="mx-auto my-5 d-block card-image align-self-center" style="width: 64px; height: 64px;">
   </div>
@@ -113,8 +110,8 @@ async function quotesData () {
     success: function (result) {
       $("#carousel_testimonials").empty();
       hideSpinner();
-      result.forEach((item, i) => {
-        quotesBuilder(item, i);
+      result.forEach((item) => {
+        quotesBuilder(item);
       });
     }
   });
@@ -159,9 +156,9 @@ async function coursesData () {
       $("#coursesResults").empty();
       const { courses } = result;
       hideSpinner();
-      courses.forEach((courses, i) => {
+      courses.forEach((item, i) => {
         console.log(courses);
-        coursesBuilder(courses, i);
+        coursesBuilder(item, i);
       });
     }
   });
